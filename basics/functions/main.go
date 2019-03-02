@@ -18,6 +18,14 @@ func add2(x, y int) int {
 func swap(x, y string) (string, string) {
 	return y, x
 }
+
+// naked return & named return values
+func split(sum int) (x, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return
+}
+
 func main() {
 	fmt.Println(add2(27, 43))
 	fmt.Println(add(10, 33))
@@ -25,4 +33,5 @@ func main() {
 	fmt.Println("Before:", a, b)
 	a, b = swap(a, b)
 	fmt.Println("After:", a, b)
+	fmt.Println(split(27))
 }
